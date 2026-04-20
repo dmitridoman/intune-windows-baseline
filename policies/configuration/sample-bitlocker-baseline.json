@@ -28,12 +28,12 @@
     },
     {
       "settingId": "device_vendor_msft_bitlocker_identificationfield",
-      "value": "CONTOSO-EDU-DEVICE"
+      "value": "HVN-MANAGED-DEVICE"
     }
   ],
   "assignment": {
     "includeGroups": [
-      "GROUP-OBJECT-ID-HERE"
+      "b2c3d4e5-f6a7-8901-bcde-f12345678901"
     ],
     "excludeGroups": []
   }

@@ -9,14 +9,14 @@
       "featureDeferralDays": 0,
       "deadlineForQualityUpdates": 3,
       "deadlineForFeatureUpdates": 14,
-      "assignmentGroup": "GROUP-OBJECT-ID-HERE"
+      "assignmentGroup": "b2c3d4e5-f6a7-8901-bcde-f12345678906"
     },
     "broadTeachingFloor": {
       "qualityDeferralDays": 4,
       "featureDeferralDays": 60,
       "deadlineForQualityUpdates": 7,
       "deadlineForFeatureUpdates": 30,
-      "assignmentGroup": "GROUP-OBJECT-ID-HERE",
+      "assignmentGroup": "b2c3d4e5-f6a7-8901-bcde-f12345678907",
       "comment": "Feature deferral is the lever that stops exam season surprises; adjust every year."
     }
   },
