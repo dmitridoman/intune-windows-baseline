@@ -1,0 +1,29 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. OS version rules need a servicing plan behind them or you just accumulate angry tickets.",
+  "policyDisplayName": "WIN11-EDU-Sample-MinOS-Build",
+  "platform": "windows10AndLater",
+  "technology": "MDM",
+  "rules": [
+    {
+      "name": "MinimumOSVersion",
+      "required": true,
+      "minimumBuild": "10.0.22631.3007",
+      "comment": "Replace build with whatever your security team actually standardised on — this string is a placeholder."
+    },
+    {
+      "name": "MaximumOSVersionTesters",
+      "required": false,
+      "description": "Some teams cap insider-style builds on managed estates; optional."
+    },
+    {
+      "name": "PasswordRequired",
+      "required": true,
+      "comment": "On shared devices you still want a sane screen lock; pairing with short idle timeouts is usually nicer than long passwords."
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}

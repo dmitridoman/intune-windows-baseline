@@ -1,0 +1,55 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Compliance policies should match what you actually remediate — marking non-compliant without a fix plan helps nobody.",
+  "policyDisplayName": "WIN11-EDU-Sample-Compliance-Core",
+  "platform": "windows10AndLater",
+  "technology": "MDM",
+  "rules": [
+    {
+      "name": "BitLocker",
+      "required": true,
+      "gracePeriodHours": 72,
+      "comment": "Grace helps after imaging mistakes; do not leave it infinite."
+    },
+    {
+      "name": "MicrosoftDefenderAntivirusEnabled",
+      "required": true
+    },
+    {
+      "name": "MicrosoftDefenderAntivirusSignatureUpToDate",
+      "required": true,
+      "toleranceHours": 48
+    },
+    {
+      "name": "FirewallEnabled",
+      "required": true
+    },
+    {
+      "name": "SecureBootEnabled",
+      "required": true,
+      "comment": "Kicks out some older lab kit — decide if that is a feature or a problem."
+    },
+    {
+      "name": "CodeIntegrityEnabled",
+      "required": false,
+      "comment": "HVCI/Credential Guard stack varies by hardware; flipping this on without testing is how you buy new laptops."
+    }
+  ],
+  "actionsForNoncompliance": [
+    {
+      "sequence": 1,
+      "action": "markNoncompliant",
+      "scheduleInDays": 0
+    },
+    {
+      "sequence": 2,
+      "action": "sendPushNotification",
+      "scheduleInDays": 1,
+      "comment": "Students ignore notifications — still useful for staff devices."
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}
