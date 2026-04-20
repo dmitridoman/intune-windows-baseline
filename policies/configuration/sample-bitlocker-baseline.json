@@ -1,0 +1,40 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY — not an export from any tenant. Adjust for your TPM, firmware, and recovery key escrow process.",
+  "policyDisplayName": "WIN11-EDU-Sample-BitLocker-Baseline",
+  "platform": "windows10AndLater",
+  "intent": "settingsCatalog",
+  "assignmentFilterDescription": "Assign to pilot device group first; widen after key recovery tests.",
+  "settings": [
+    {
+      "settingId": "device_vendor_msft_bitlocker_requiredeviceencryption",
+      "value": true,
+      "comment": "Requires encryption-capable hardware; fails noisy on VMs or odd firmware."
+    },
+    {
+      "settingId": "device_vendor_msft_bitlocker_systemdrives_encryptionmethod",
+      "value": "XtsAes256"
+    },
+    {
+      "settingId": "device_vendor_msft_bitlocker_systemdrives_recoverypasswordcreation",
+      "value": "Required"
+    },
+    {
+      "settingId": "device_vendor_msft_bitlocker_fixeddrives_encryptionmethod",
+      "value": "XtsAes256"
+    },
+    {
+      "settingId": "device_vendor_msft_bitlocker_removabledrives_encryptionmethod",
+      "value": "Aes128"
+    },
+    {
+      "settingId": "device_vendor_msft_bitlocker_identificationfield",
+      "value": "CONTOSO-EDU-DEVICE"
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ],
+    "excludeGroups": []
+  }
+}

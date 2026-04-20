@@ -1,0 +1,36 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Local admin is where classroom estates blow up — pair with LAPS and a real break-glass process.",
+  "policyDisplayName": "WIN11-EDU-Sample-LocalAdmin-Posture",
+  "platform": "windows10AndLater",
+  "intent": "mixedDocumentation",
+  "sections": [
+    {
+      "name": "LocalUsersAndGroups (conceptual)",
+      "description": "In Intune you typically manage this via Settings Catalog or Account Protection profiles. Below is intent, not a literal CSP paste.",
+      "intendedBehaviour": [
+        "Remove ad-hoc local admin grants from shared devices.",
+        "Retain a single managed break-glass account if policy allows (often LAPS-managed).",
+        "Block students from elevation paths that depend on cached creds on shared machines."
+      ]
+    },
+    {
+      "name": "WindowsLAPS (directional)",
+      "description": "If you use Entra-joined devices, LAPS for Windows is the least awful way to avoid shared static passwords.",
+      "sampleSettingIdeas": [
+        {
+          "idea": "Enable LAPS policy for Entra-joined devices",
+          "placeholderTenantId": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "idea": "Rotate after admin recovery use",
+          "note": "Teach helpdesk to read the password from the right blade — people still screenshot it."
+        }
+      ]
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}

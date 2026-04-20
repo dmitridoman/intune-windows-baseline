@@ -1,0 +1,31 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Authentication strength lives largely in Entra ID Conditional Access; this file captures device-side alignment and intent.",
+  "policyDisplayName": "WIN11-EDU-Sample-Auth-Strength-Alignment",
+  "platform": "windows10AndLater",
+  "intent": "documentationWithDeviceToggles",
+  "entraConditionalAccess": {
+    "comment": "Not configured in this JSON — document your CA policies separately. This is the bit people forget to link.",
+    "exampleNamedPolicies": [
+      "CA-Staff-PhishingResistant-MFA",
+      "CA-Student-StrongMFA-WhereLicensed"
+    ]
+  },
+  "deviceSettingsDirection": [
+    {
+      "theme": "Prefer Windows Hello for Business where hardware allows",
+      "settingsCatalogIntent": [
+        "Enable WHfB provisioning where supported",
+        "Do not silently assume every classroom PC has TPM 2.0 — pilot first"
+      ]
+    },
+    {
+      "theme": "Reduce reliance on reusable passwords for admin tasks",
+      "operationalNote": "Cloud-only break-glass should be rare, monitored, and ugly to use on purpose."
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}

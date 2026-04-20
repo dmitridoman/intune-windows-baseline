@@ -1,0 +1,38 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. ASR in schools hits odd teaching software — start in audit, read the noise, then enforce.",
+  "policyDisplayName": "WIN11-EDU-Sample-ASR-Staged",
+  "platform": "windows10AndLater",
+  "intent": "attackSurfaceReductionRules",
+  "deploymentPhase": "audit_then_enforce",
+  "rules": [
+    {
+      "ruleId": "BlockExecutableContentFromEmailClientAndWebmail",
+      "state": "audit",
+      "comment": "Email clients on shared lab PCs are rarer but students find a way."
+    },
+    {
+      "ruleId": "BlockOfficeApplicationsFromCreatingChildProcesses",
+      "state": "audit",
+      "comment": "Macro-heavy coursework breaks here — expect exclusions later."
+    },
+    {
+      "ruleId": "BlockOfficeCommunicationAppFromCreatingChildProcesses",
+      "state": "audit"
+    },
+    {
+      "ruleId": "BlockAdobeReaderFromCreatingChildProcesses",
+      "state": "warn",
+      "comment": "warn is a compromise when audit logs are too quiet and enforce is too loud."
+    },
+    {
+      "ruleId": "UseAdvancedProtectionAgainstRansomware",
+      "state": "disabled",
+      "comment": "Controlled folder access is powerful and also excellent at breaking legit save paths; pilot separately."
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}

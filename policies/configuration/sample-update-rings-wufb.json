@@ -1,0 +1,28 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Ring names and deferrals should match your academic calendar, not mine.",
+  "policyDisplayName": "WIN11-EDU-Sample-WUfB-Ring-Pilot",
+  "platform": "windows10AndLater",
+  "intent": "windowsUpdateForBusiness",
+  "rings": {
+    "pilotLab": {
+      "qualityDeferralDays": 0,
+      "featureDeferralDays": 0,
+      "deadlineForQualityUpdates": 3,
+      "deadlineForFeatureUpdates": 14,
+      "assignmentGroup": "GROUP-OBJECT-ID-HERE"
+    },
+    "broadTeachingFloor": {
+      "qualityDeferralDays": 4,
+      "featureDeferralDays": 60,
+      "deadlineForQualityUpdates": 7,
+      "deadlineForFeatureUpdates": 30,
+      "assignmentGroup": "GROUP-OBJECT-ID-HERE",
+      "comment": "Feature deferral is the lever that stops exam season surprises; adjust every year."
+    }
+  },
+  "servicingChannel": "generalAvailability",
+  "userExperience": {
+    "restartGracePeriodHours": 24,
+    "allowWindowsUpdateScan": true
+  }
+}

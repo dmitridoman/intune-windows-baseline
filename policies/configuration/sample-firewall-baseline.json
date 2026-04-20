@@ -1,0 +1,42 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Firewall rules for teaching apps are the usual pain; this is the boring default-first posture.",
+  "policyDisplayName": "WIN11-EDU-Sample-Firewall-Baseline",
+  "platform": "windows10AndLater",
+  "intent": "settingsCatalog",
+  "settings": [
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_enablefirewall_domain",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_enablefirewall_private",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_enablefirewall_public",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_defaultinboundaction_domain",
+      "value": "Block"
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_defaultoutboundaction_domain",
+      "value": "Allow"
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_disablestealthmode_domain",
+      "value": false,
+      "comment": "Stealth mode off is sometimes needed for management visibility; validate with your network team."
+    },
+    {
+      "settingId": "device_vendor_msft_firewall_mdmfirewall_logmaxfilesize_domain",
+      "value": 10240
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}

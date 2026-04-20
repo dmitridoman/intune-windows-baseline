@@ -1,0 +1,43 @@
+{
+  "note": "SAMPLE / ILLUSTRATIVE ONLY. Real deployments need exclusions for lab tools and some LOB; document them, do not leave wildcards hanging.",
+  "policyDisplayName": "WIN11-EDU-Sample-Defender-Antivirus",
+  "platform": "windows10AndLater",
+  "intent": "settingsCatalog",
+  "settings": [
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_allowarchivescanning",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_allowemailscanning",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_allowfullscanonmappednetworkdrives",
+      "value": false,
+      "comment": "Mapped drives in schools are a mess; full scan can tank login times."
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_allowintrusionpreventionsystem",
+      "value": true
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_submitSamplesConsent",
+      "value": "sendSafeSamplesAutomatically"
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_scheduledscan_day",
+      "value": 7,
+      "comment": "Saturday — tweak if your estate is on over weekends."
+    },
+    {
+      "settingId": "device_vendor_msft_policy_config_defender_checkforsignaturesbefore_running_scan",
+      "value": true
+    }
+  ],
+  "assignment": {
+    "includeGroups": [
+      "GROUP-OBJECT-ID-HERE"
+    ]
+  }
+}
