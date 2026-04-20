@@ -1,0 +1,23 @@
+# intune-windows-baseline
+
+Sample **illustrative** Windows 11 baseline fragments for a managed school or other shared-device estate. Nothing here is claimed to be copied from a live tenant export.
+
+## What is in this repo
+
+- `policies/configuration/` — JSON shaped like settings catalogue / policy intent (BitLocker, Defender, firewall, local admin posture, authentication strength direction, updates, ASR).
+- `policies/compliance/` — sample compliance policy shapes for Windows 11.
+- `docs/` — why certain choices exist and what you give up when you tighten the baseline.
+
+## How to use it
+
+Treat the JSON as **documentation and structure**, not something to import blindly. In a real tenant you would recreate these in the Intune admin centre (or via IaC you trust), align to your risk register, and test on a pilot ring before wide assignment.
+
+## What you must change
+
+- Replace every placeholder ID, group name, and ring name with your own (`GROUP-OBJECT-ID-HERE`, `contoso.onmicrosoft.com`, etc.).
+- Map settings to your **edition** (e.g. Pro vs Education) and **licensing** (some controls assume certain SKUs).
+- Validate **helpdesk impact**: shared devices and classrooms break in boring ways when local admin or credential UX is wrong.
+
+## Disclaimer
+
+These samples are for learning and portfolio context only. You are responsible for compliance with your organisation’s policies and for testing before production rollout.
