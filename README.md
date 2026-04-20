@@ -14,7 +14,7 @@ Treat the JSON as **documentation and structure**, not something to import blind
 
 ## What you must change
 
-- Replace every placeholder ID, group name, and ring name with your own (`GROUP-OBJECT-ID-HERE`, `contoso.onmicrosoft.com`, etc.).
+- Samples use **Harven-style illustrative IDs** (tenant `harvengroup.onmicrosoft.com`, custom domain `harven.co.uk`, tenant ID `a1b2c3d4-e5f6-7890-abcd-ef1234567890`, device prefix `HVN-`). Swap in your real assignments before production use.
 - Map settings to your **edition** (e.g. Pro vs Education) and **licensing** (some controls assume certain SKUs).
 - Validate **helpdesk impact**: shared devices and classrooms break in boring ways when local admin or credential UX is wrong.
 
