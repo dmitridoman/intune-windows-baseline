@@ -2,11 +2,15 @@
 
 Sample **illustrative** Windows 11 baseline fragments for a managed school or other shared-device estate. Nothing here is claimed to be copied from a live tenant export.
 
+**Status:** illustrative samples, not a live tenant export.
+**Runs on:** nothing: JSON and Markdown to read and recreate in Intune.
+**Used by:** IT admins designing a Windows 11 baseline for shared devices.
+
 ## What is in this repo
 
-- `policies/configuration/` — JSON shaped like settings catalogue / policy intent (BitLocker, Defender, firewall, local admin posture, authentication strength direction, updates, ASR).
-- `policies/compliance/` — sample compliance policy shapes for Windows 11.
-- `docs/` — why certain choices exist and what you give up when you tighten the baseline.
+- `policies/configuration/`: JSON shaped like settings catalogue / policy intent (BitLocker, Defender, firewall, local admin posture, authentication strength direction, updates, ASR).
+- `policies/compliance/`: sample compliance policy shapes for Windows 11.
+- `docs/`: why certain choices exist and what you give up when you tighten the baseline.
 
 ## How to use it
 
